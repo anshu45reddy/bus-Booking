@@ -20,6 +20,7 @@ import { UserService } from './user/services/user.service';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 
 
@@ -53,7 +54,8 @@ import { SignUpComponent } from './sign-up/sign-up.component';
   providers: [
     SelectBusService,
     BookingService,
-    UserService
+    UserService,
+    {provide :LocationStrategy, useClass: HashLocationStrategy}
   ],
   bootstrap: [AppComponent]
 })
