@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
+import { UserService } from '../user.service';
+
 
 @Component({
   selector: 'app-login',
@@ -7,9 +11,42 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router,private user:UserService) { }
 
   ngOnInit(): void {
+    if(localStorage.getItem("username") !==null){
+      this.router.navigateByUrl("home")
+    }
   }
 
+  onLogin(userCredentials){
+    
+    this.user.loginUser(userCredentials).subscribe(
+      res=>{
+        if(res.message==="Login successful"){
+          localStorage.setItem("token",res.token)
+          localStorage.setItem("username",res.username)
+          localStorage.setItem("UserObj",JSON.stringify(res.userObj))
+          this.user.userLoginStatus=true;
+
+          alert("Login Sucessful");
+          this.router.navigateByUrl("home");
+        }
+        else if(res.message==="Wrong Password"){
+          alert("Enter Correct Password");
+        }
+        else{
+          alert("Not valid username");
+        }
+      },
+      err=>{
+        alert("Error occured while logging in")
+      }
+    )
+
+  }
+
+  signUp(): void{
+    this.router.navigateByUrl("/signUp");
+  }
 }

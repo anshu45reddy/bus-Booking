@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { UserService } from '../user.service';
+
 
 @Component({
   selector: 'app-sign-up',
@@ -7,9 +10,34 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SignUpComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router,private user:UserService) { }
 
   ngOnInit(): void {
+  }
+
+  onSignUp(userCredentials): void{
+    console.log(userCredentials);
+    this.user.createUser(userCredentials).subscribe(
+      res=>{
+        if(res.message==="user is created"){
+          alert("user created")
+          this.router.navigateByUrl("/login")
+        }
+
+        else if(res.message==="user already existed"){
+          alert("Already a User");
+          this.router.navigateByUrl("/login");
+        }
+
+        else{
+          alert("Something went wrong");
+        }
+      },
+      err=>{
+        alert("err is occured in sign up")
+      }
+    );
+    
   }
 
 }
