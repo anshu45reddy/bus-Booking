@@ -21,6 +21,7 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { FooterComponent } from './footer/footer.component';
 
 
 
@@ -37,6 +38,7 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     LoginComponent,
     HomeComponent,
     SignUpComponent,
+    FooterComponent,
     
  
   ],
