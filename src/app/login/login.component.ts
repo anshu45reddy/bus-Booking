@@ -15,7 +15,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     if(localStorage.getItem("username") !==null){
-      this.router.navigateByUrl("home")
+      this.router.navigateByUrl("login")
     }
   }
 
@@ -30,7 +30,7 @@ export class LoginComponent implements OnInit {
           this.user.userLoginStatus=true;
 
           alert("Login Sucessful");
-          this.router.navigateByUrl("home");
+          this.router.navigateByUrl("book");
         }
         else if(res.message==="Wrong Password"){
           alert("Enter Correct Password");
