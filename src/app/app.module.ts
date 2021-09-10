@@ -23,6 +23,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { FooterComponent } from './footer/footer.component';
 import { BookTicketsComponent } from './book-tickets/book-tickets.component';
+import { ProfileComponent } from './profile/profile.component';
 
 
 
@@ -41,6 +42,7 @@ import { BookTicketsComponent } from './book-tickets/book-tickets.component';
     SignUpComponent,
     FooterComponent,
     BookTicketsComponent,
+    ProfileComponent,
    
  
   ],
