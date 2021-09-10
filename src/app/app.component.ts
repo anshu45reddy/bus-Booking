@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { UserService } from './user.service';
-import {Router} from '@angular/router'
 
 @Component({
   selector: 'app-root',
@@ -9,12 +7,4 @@ import {Router} from '@angular/router'
 })
 export class AppComponent {
   title = 'travelBooking';
-
-  constructor(public us:UserService,private router:Router){}
-
-  userLogout(){
-    localStorage.clear();
-    this.us.userLoginStatus=false;
-    this.router.navigateByUrl("login")
-  }
 }
