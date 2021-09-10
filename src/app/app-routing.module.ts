@@ -9,6 +9,7 @@ import { SelectBusComponent } from './book-tickets/user/select-bus/select-bus.co
 
 import { UserFormComponent } from './book-tickets/user/user-form/user-form.component';
 import { BookTicketsComponent } from './book-tickets/book-tickets.component';
+import { ProfileComponent } from './profile/profile.component';
 
 
 const routes: Routes = [
@@ -16,6 +17,7 @@ const routes: Routes = [
   {path : 'home', component: HomeComponent},
   {path : 'signUp', component: SignUpComponent},
   {path : 'login', component: LoginComponent},
+  {path: 'profile', component:ProfileComponent},
   
   {
     path: 'book',

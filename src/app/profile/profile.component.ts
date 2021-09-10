@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
+  userObj;
+
 
   constructor() { }
 
   ngOnInit(): void {
+    this.userObj=JSON.parse(localStorage.getItem("UserObj"))
+
   }
 
 }
