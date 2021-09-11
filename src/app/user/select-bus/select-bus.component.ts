@@ -64,10 +64,11 @@ export class SelectBusComponent implements OnInit {
       console.log(leavingfrom)
       if(leavingfrom=='dhaka'){
         this.place= [
+          {key:'1109001', value:'Comilla'} ,
           {key:'1109002', value:'Chittagong'} ,
           {key:'1109004', value:'KuaKata'} ,
           {key:'1109005', value:'Coxs Bazar'},
-
+          {key:'1109006', value:'Rajshahi'} 
    
         ]
     }

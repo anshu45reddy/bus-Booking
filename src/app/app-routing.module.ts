@@ -13,24 +13,23 @@ import { ProfileComponent } from './profile/profile.component';
 
 
 const routes: Routes = [
-  {path:'', redirectTo:'/home', pathMatch:'full'},
+  {path :'', redirectTo:'/home' , pathMatch: "full"},
   {path : 'home', component: HomeComponent},
   {path : 'signUp', component: SignUpComponent},
   {path : 'login', component: LoginComponent},
-  {path: 'profile', component:ProfileComponent},
-  
+  {path : 'profile', component:ProfileComponent},
   {
     path: 'book',
     component: BookTicketsComponent,
     children: [
-     {path:'',component:SelectBusComponent},
+     {path:'',component:SelectBusComponent},    
+  
+    ]
+  }, 
      {path:'search',component:BusSearchResultComponent},
      {path:'user-form',component:UserFormComponent},
-     {path:'print',component:PrintComponent},   
-    ]
-  },
+     {path:'print',component:PrintComponent},
 ];
-
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

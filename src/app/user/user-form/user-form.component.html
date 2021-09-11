@@ -1,4 +1,4 @@
-<div class="container pt-4 ">
+<div class="container mt-4 ">
     <div class="row justify-content-center">
         <div class="col-md-10">
             <div class="row">
@@ -16,9 +16,7 @@
                             <label>Email </label>
                             <input type="email" required name="user_email" ngModel class="form-control form-control-sm">
                         </div>
-                        <div class="text-center">
-                            <button [disabled]="!userF.valid" class="btn  btn-success mt-4">Submit</button>
-                        </div>
+                        <button [disabled]="!userF.valid" class="btn btn-sm btn-primary">Submit</button>
                     </form>
                 </div>
                 <div class="col-md-4">
