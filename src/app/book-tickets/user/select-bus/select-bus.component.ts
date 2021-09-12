@@ -11,12 +11,7 @@ import { SelectBusService } from '../services/selectBus.service';
 })
 
 export class SelectBusComponent implements OnInit {
-  // ={
-  //   1109001:'comilla',
-  //   1109002:'Chittagong',
-  //   1109003:'Sylet',
-  //   1109004:'Barisal'
-  // }
+ 
   
   pnumber=1;
   
