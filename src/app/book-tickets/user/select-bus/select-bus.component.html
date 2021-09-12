@@ -2,18 +2,18 @@
     <div class="text-light text-center">
         <h4>Book Your Ride.</h4>
     </div>
-    <div class="row justify-content-center pb-5 pt-3">
-        <div class="col-md-5 block mt-3">
+    <div class="row justify-content-center  pb-3">
+        <div class="col-md-5 block mt-2">
             <form (ngSubmit)="SearchBus(f)" #f=ngForm>
                 <div class="row">
                     <div class="form-group col-md-6">
                         <label class="pb-2">Leaving from</label>
                         <select (change)="leave($event)" name="leaving_form" required ngModel class="form-control form-control-sm">
               <option value="">Select Place</option>
-              <option value="dhaka">Dhaka</option>
-              <option value="comilla">Comilla</option>
+              <option value="Hyderabad">Hyderabad</option>
+              <option value="Chennai">Chennai</option>
             
-              <option value="chittagong">Chittagong</option>
+              <option value="Bangalore">Bangalore</option>
             </select>
                     </div>
                     <div class="form-group col-md-6">
@@ -33,7 +33,7 @@
                     </div>
 
                 </div>
-                <button [disabled]="!f.valid" class="btn btn-block btn-white mt-3 btn-search btn-sm"> <i class="fas mr-2 fa-search"></i> Search Buses</button>
+                <button [disabled]="!f.valid" class="btn btn-block btn-success mt-1 btn-search btn-sm mb-2"> <i class="fas mr-2 fa-search"></i> Search Buses</button>
             </form>
         </div>
 

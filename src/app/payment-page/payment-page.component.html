@@ -1,0 +1,42 @@
+<div class="container w-100 bg-white mt-2">
+
+    <form #ref="ngForm" (ngSubmit)="addUserData(ref)" class="form d-block mx-auto w-50">
+        <div class="title text-center">GUEST DETAILS</div>
+
+        <!-- FULL NAME -->
+        <div class="input-container ic1">
+            <input autocomplete="off" name="fullname" id="firstname" class="input" type="text" placeholder=" " ngModel />
+            <div class="cut"></div>
+            <label for="firstname" class="placeholder">Full Name</label>
+        </div>
+
+        <!-- Mobile NUMBER -->
+        <div class="input-container ic2">
+            <input autocomplete="off" name="mobilenumber" id="lastname" class="input" type="number" placeholder=" " ngModel />
+            <div class="cut cut-1"></div>
+            <label for="lastname" class="placeholder">Mobile Number</label>
+        </div>
+
+        <!-- Email -->
+        <div class="input-container ic2">
+            <input autocomplete="off" name="email" id="email" class="input" type="text" placeholder=" " ngModel />
+            <div class="cut cut-2"></div>
+            <label for="email" class="placeholder">Email</label>
+        </div>
+
+        <hr>
+        <!-- UPI ID -->
+        <div class="input-container ic1">
+            <input autocomplete="off" id="firstname" class="input" type="text" placeholder=" " />
+            <div class="cut cut-3"></div>
+            <label for="firstname" class="placeholder">Enter UPI ID</label>
+        </div>
+        <button type="submit" class="submit" [routerLink]="['/payment-page/print-receipt']" routerLinkActive="router-link-active">submit</button>
+    </form>
+
+
+</div>
+
+
+
+<app-print-receipt [dataFromParent]="users"></app-print-receipt>

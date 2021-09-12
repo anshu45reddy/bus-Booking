@@ -62,29 +62,29 @@ export class SelectBusComponent implements OnInit {
    
       let leavingfrom=e.target.value;
       console.log(leavingfrom)
-      if(leavingfrom=='dhaka'){
+      if(leavingfrom=='Hyderabad'){
         this.place= [
-          {key:'1109002', value:'Chittagong'} ,
-          {key:'1109004', value:'KuaKata'} ,
-          {key:'1109005', value:'Coxs Bazar'},
+          {key:'1109002', value:'Bangalore'} ,
+          {key:'1109004', value:'Kolkata'} ,
+          {key:'1109005', value:'Chennai'},
 
    
         ]
     }
-    else if(leavingfrom=='comilla'){
+    else if(leavingfrom=='Chennai'){
       this.place= [
-        {key:'2209002', value:'Chittagong'} ,
-        {key:'2209001', value:'Dhaka'} ,
-        {key:'2209003', value:'Rajshahi'} ,
+        {key:'2209002', value:'Bangalore'} ,
+        {key:'2209001', value:'Hyderabad'} ,
+        {key:'2209003', value:'Rajasthan'} ,
        
   
       ]
     }
-    else if(leavingfrom=='chittagong'){
+    else if(leavingfrom=='Bangalore'){
       this.place= [
-        {key:'3309003', value:'Mymensingh'} ,
-        {key:'3309001', value:'Dhaka'} ,
-        {key:'3309002', value:'Sylet'} ,
+        {key:'3309003', value:'Mumbai'} ,
+        {key:'3309001', value:'Hyderabad'} ,
+        {key:'3309002', value:'Delhi'} ,
      
       ]
     }

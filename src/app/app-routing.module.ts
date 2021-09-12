@@ -10,6 +10,12 @@ import { SelectBusComponent } from './book-tickets/user/select-bus/select-bus.co
 import { UserFormComponent } from './book-tickets/user/user-form/user-form.component';
 import { BookTicketsComponent } from './book-tickets/book-tickets.component';
 import { ProfileComponent } from './profile/profile.component';
+import { HotelsComponent } from './hotels/hotels.component';
+import { BengaluruComponent } from './bengaluru/bengaluru.component';
+import { ChennaiComponent } from './chennai/chennai.component';
+import { HotelsPageIComponent } from './hotes-page-i/hotes-page-i.component';
+import { PaymentPageComponent } from './payment-page/payment-page.component';
+import { PrintReceiptComponent } from './print-receipt/print-receipt.component';
 
 
 const routes: Routes = [
@@ -29,6 +35,20 @@ const routes: Routes = [
      {path:'search',component:BusSearchResultComponent},
      {path:'user-form',component:UserFormComponent},
      {path:'print',component:PrintComponent},
+
+     {path:'hotels',component:HotelsComponent,
+     children:[
+         {path:'Bengaluru',component:BengaluruComponent},
+        {path:'Chennai',component:ChennaiComponent},
+        {path:':id',component:HotelsPageIComponent}
+         
+     ]},
+  
+  {path:'payment-page',component:PaymentPageComponent,children:[
+    {path:'print-receipt',component:PrintReceiptComponent}
+    
+  ]},
+
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

@@ -24,6 +24,12 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { FooterComponent } from './footer/footer.component';
 import { BookTicketsComponent } from './book-tickets/book-tickets.component';
 import { ProfileComponent } from './profile/profile.component';
+import { BengaluruComponent } from './bengaluru/bengaluru.component';
+import { ChennaiComponent } from './chennai/chennai.component';
+import { HotelsPageIComponent } from './hotes-page-i/hotes-page-i.component';
+import { HotelsComponent } from './hotels/hotels.component';
+import { PaymentPageComponent } from './payment-page/payment-page.component';
+import { PrintReceiptComponent } from './print-receipt/print-receipt.component';
 
 
 
@@ -43,6 +49,12 @@ import { ProfileComponent } from './profile/profile.component';
     FooterComponent,
     BookTicketsComponent,
     ProfileComponent,
+    BengaluruComponent,
+    ChennaiComponent,
+    HotelsPageIComponent,
+    HotelsComponent,
+    PaymentPageComponent,
+    PrintReceiptComponent,
    
  
   ],
