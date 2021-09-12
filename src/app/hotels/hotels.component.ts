@@ -10,7 +10,7 @@ import { ActivatedRoute } from '@angular/router';
 export class HotelsComponent  {
   constructor(public router: ActivatedRoute) { }
 
-
+searchedCity:string;
  data=[];
  
  

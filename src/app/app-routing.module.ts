@@ -42,9 +42,9 @@ const routes: Routes = [
         {path:'Chennai',component:ChennaiComponent},
         {path:':id',component:HotelsPageIComponent}
          
-     ]},
+       ]},
   
-  {path:'payment-page',component:PaymentPageComponent,children:[
+   {path:'payment-page',component:PaymentPageComponent,children:[
     {path:'print-receipt',component:PrintReceiptComponent}
     
   ]},

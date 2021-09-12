@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { DdataService } from '../ddata.service';
 import { m_hotels } from '../MODELS/hotels.model';
 
+
 @Component({
   selector: 'app-bengaluru',
   templateUrl: './bengaluru.component.html',

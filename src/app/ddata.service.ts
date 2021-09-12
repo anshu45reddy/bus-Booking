@@ -1,11 +1,12 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http'
-import { m_hotels } from './MODELS/hotels.model';
 import { Observable } from 'rxjs';
+import { m_hotels } from './MODELS/hotels.model';
 
 @Injectable({
   providedIn: 'root'
 })
+
 export class DdataService {
 
   //inject http client
